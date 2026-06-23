@@ -1,0 +1,170 @@
+/* ===== Reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+#pwindow {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Top Bar ===== */
+
+#topbar {
+    height: 70px;
+    background: #1f1f1f;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+/* Left side (logo + title) */
+#topbar h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.7rem;
+}
+
+/* Small logo */
+#topbar h2::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+
+    background-image: url("images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#topbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+#topbar li {
+    cursor: pointer;
+    transition: .25s;
+}
+
+#topbar li:hover {
+    color: #66c8ff;
+}
+
+/* ===== Hero ===== */
+
+#hero {
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+}
+
+#hero button {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 6px;
+
+    background: #3498db;
+    color: white;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+    transition: .2s;
+}
+
+#hero button:hover {
+    background: #2179b5;
+}
+
+/* ===== Information Area ===== */
+
+#area {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+
+    padding: 50px;
+}
+
+/* Example cards (add class="card") */
+
+#area .card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.12);
+}
+
+/* ===== Footer ===== */
+
+#footer {
+    height: 90px;
+
+    background: #1f1f1f;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+}
+
+/* Right logo */
+
+#footer::after {
+    content: "";
+
+    width: 45px;
+    height: 45px;
+
+    background-image: url("images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
